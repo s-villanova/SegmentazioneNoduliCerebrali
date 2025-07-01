@@ -14,14 +14,14 @@ Il sistema è stato addestrato e testato sul dataset pubblico **_BRISC2025_**, c
   - **📁 `segmentation_task/`**
     - **📁 `test/`**
       - **📁 `images/`**
-      - 📄 `annotation.coco.json` – File di annotazione in formato COCO.  
+      - **📁 `masks/`**
+      - 📄 `annotation.coco.json` – File di annotazione in formato COCO per test set.  
     - **📁 `train/`**
-      - 📄 `annotation.coco.json` – File di annotazione in formato COCO.
+      - **📁 `images/`** - Contenente immagini MRI in formato JPG
+      - **📁 `masks/`** - Contenente maschere binarie in formato JPG
+      - 📄 `annotation.coco.json` – File di annotazione in formato COCO per train set. 
     - 🐍 `generateAnnotationsCoco.py` – Script per convertire immagini, categorie e maschere PNG in formato COCO.  
-    - 🐍 `visualizzaMaschereRLE.py` – Script per visualizzare immagini random con maschera ricostruita dalle annotazioni COCO per validare la conversione generata. 
-      
-   
-  - 🔗 Dataset originale disponibile su [Kaggle – BRISC2025](https://www.kaggle.com/datasets/briscdataset/brisc2025).
+    - 🐍 `visualizzaMaschereRLE.py` – Script per visualizzare immagini random dalle annotazioni COCO con maschera ricostruita per validare la conversione generata. 
 
 - **📁 `model/`**  
   - Modello Mask R-CNN addestrato (`model_final.pth`).  
@@ -31,42 +31,16 @@ Il sistema è stato addestrato e testato sul dataset pubblico **_BRISC2025_**, c
   - 📄 `documentazioneSistemiMultimediali.pdf` – Documentazione completa del progetto.  
   - 📊 `report_inferenza_testset.ods` – Report completo sull’inferenza sul test set, con risultati immagine per immagine e metriche aggregate.
 
-- **📁 `scripts/`**  
-  - 🐍 Script per inferenza (`inferenzia.py`).  
-  - 🐍 Script per valutazione e generazione di report (`valutazione.py`).  
-  - Altri script ausiliari per la gestione dati.
-
 - **📁 `colab/`**  
   - 📓 `tumor_segmentation_colab.ipynb` – Notebook eseguito su Google Colab contenente l’intero workflow del progetto:  
-    - Setup ambiente  
-    - Preprocessing e conversione dataset  
+    - Setup ambiente 
     - Training del modello  
-    - Inferenza e analisi dei risultati  
-    - Salvataggio modello e report
+    - Script per inferenza e analisi dei risultati  
+    - Salvataggio modello e report in CSV
 
 - **📁 `detectron2/`**  
   - Versione della libreria Detectron2 utilizzata, oppure il file `requirements.txt` con tutti i pacchetti necessari.  
   - Link ufficiale Detectron2: [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)
-
-## 📦 Struttura delle cartelle
-├── dataset/
-│ ├── annotations_coco.json
-│ ├── convert_to_coco.py
-│ ├── visualize_annotation.py
-│ └── ...
-├── model/
-│ └── model_final.pth
-├── report/
-│ ├── documentazioneSistemiMultimediali.pdf
-│ └── report_inferenza_testset.ods
-├── scripts/
-│ ├── inferenza.py
-│ ├── valutazione.py
-│ └── ...
-├── colab/
-│ └── tumor_segmentation_colab.ipynb
-├── detectron2/ (oppure requirements.txt)
-└── README.md
 
 ## 🛠️ Requisiti
 - Python 3.9+  
@@ -78,7 +52,7 @@ Il sistema è stato addestrato e testato sul dataset pubblico **_BRISC2025_**, c
 
 ## 📑 Dataset
 - Dataset originale: [BRISC2025 su Kaggle](https://www.kaggle.com/datasets/briscdataset/brisc2025)  
-- Conversione in formato COCO + RLE disponibile nella cartella `/dataset/` con script dedicato.
+- Conversione in formato COCO + RLE disponibile nella cartella `/BRISC2025/` con script dedicato.
 
 ## 📈 Risultati
 - **IoU media:** 0.8189  
