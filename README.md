@@ -1,14 +1,7 @@
 # SegmentazioneNoduliCerebrali con Mask R-CNN – BRISC2025
 
-## ⚠️ Disclaimer
-Questo repository è condiviso esclusivamente a scopo **didattico e di ricerca**, senza alcun fine commerciale.
-
-Il dataset incluso è il risultato di una rielaborazione del dataset pubblico **BRISC2025** disponibile su Kaggle.  
-Le annotazioni in formato **COCO**, incluse le maschere codificate tramite **Run-Length Encoding (RLE)**, sono state **interamente generate dal gruppo che contribuisce a questo progetto**.  
-Non sono fornite dagli autori del dataset originale, ma create tramite uno script di conversione sviluppato appositamente, con l’obiettivo di rendere il dataset pienamente compatibile con il framework **Detectron2** per il task di segmentazione.
-Le immagini sono state caricate per consentire la completa riproducibilità del progetto.  
-**Qualora gli autori originali o la piattaforma Kaggle ne richiedessero la rimozione, il dataset sarà immediatamente eliminato dal repository e sostituito con una guida dettagliata per la generazione autonoma del dataset nel formato utilizzato in questo progetto.**
-
+## ℹ️ Nota sulla licenza dei dati
+Il dataset incluso è distribuito secondo i termini della licenza **Creative Commons Attribution 4.0 International (CC BY 4.0)**, che consente la condivisione e l’adattamento per qualsiasi scopo, incluso quello commerciale, a condizione che vengano forniti i dovuti crediti agli autori originali.
 
 ## 🔍 Descrizione del progetto
 Questo repository contiene un progetto per la segmentazione automatica di tumori cerebrali su immagini MRI, utilizzando un modello Mask R-CNN con backbone ResNet-50 + FPN implementato tramite la libreria Detectron2.
@@ -58,7 +51,10 @@ Il sistema è stato addestrato e testato sul dataset pubblico **_BRISC2025_**, c
   - Link ufficiale Detectron2: [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)
 
 ## 📑 Dataset
-- Dataset originale: [BRISC2025 su Kaggle](https://www.kaggle.com/datasets/briscdataset/brisc2025)  
+Il dataset utilizzato è **BRISC2025**, disponibile pubblicamente su Kaggle e distribuito sotto licenza **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.
+
+- Dataset originale: [BRISC2025 su Kaggle](https://www.kaggle.com/datasets/briscdataset/brisc2025)
+- 🔗 Licenza originale: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - Conversione in formato COCO disponibile nella cartella `/BRISC2025/` con script dedicato.
 
 ## 📈 Risultati
