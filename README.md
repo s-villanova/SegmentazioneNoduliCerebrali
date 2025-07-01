@@ -8,7 +8,7 @@ Questo repository contiene un progetto per la segmentazione automatica di tumori
 
 Il sistema è stato addestrato e testato sul dataset pubblico **_BRISC2025_**, convertito in formato COCO con segmentazioni pixel-wise codificate tramite **Run-Length Encoding (RLE)**.
 
-## 🚀 Contenuto del repository
+## 📁 Contenuto del repository
 - **📁 `BRISC2025/`**  - Dataset convertito in formato COCO + RLE
   - **📁 `classification_task/`**
     - 📄 cartelle e file relativi a classificazione (non utlizzata in questo progetto)
