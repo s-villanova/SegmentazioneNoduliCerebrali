@@ -1,7 +1,5 @@
 # SegmentazioneNoduliCerebrali con Mask R-CNN – BRISC2025
 
-# 🧠 Tumor Segmentation with Mask R-CNN – BRISC2025
-
 ## 🔍 Descrizione del progetto
 Questo repository contiene un progetto per la segmentazione automatica di tumori cerebrali su immagini MRI, utilizzando un modello Mask R-CNN con backbone ResNet-50 + FPN implementato tramite la libreria Detectron2.
 
