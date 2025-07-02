@@ -34,13 +34,15 @@ Il sistema è stato addestrato e testato sul dataset pubblico **_BRISC2025_**, c
 
 - **📁 `colab/`**  
   - 📓 `tumor_segmentation_colab.ipynb` – Notebook eseguito su Google Colab contenente l’intero workflow del progetto:
-    - Script per montare una cartella di google drive in ambiente Colab
-    - Setup ambiente
+    - Script per clonare repo github
+    - Script per collegarsi a drive e salvare eventualmente una copia di backup
+    - Setup per installare detectron2 pytorch e torchvision
     - Script per estrazione di eventuali file .zip
-    - Registrazione istanze COCO
+    - Script per registrazione istanze COCO
+    - Script per Training del modello
     - Script debug per validare mapper e augmentation usati in training
-    - Training del modello
     - Script per evaluation con COCOEvaluator
+    - Script per visualizzare eventi training su TensorBoard
     - Script per eseguire inferenza su un'immagine caricata dal proprio PC
     - Script Gradio per testing modello
     - Script per inferenza e generazione report CSV
