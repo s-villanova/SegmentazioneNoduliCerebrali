@@ -8,6 +8,27 @@ Questo repository contiene un progetto per la segmentazione automatica di tumori
 
 Il sistema è stato addestrato e testato sul dataset pubblico **_BRISC2025_**, convertito in formato COCO con segmentazioni pixel-wise codificate tramite **Run-Length Encoding (RLE)**.
 
+---
+## 📑 Dataset
+Il dataset utilizzato è **BRISC2025**, disponibile pubblicamente su Kaggle e distribuito sotto licenza **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.
+
+- Dataset originale: [BRISC2025 su Kaggle](https://www.kaggle.com/datasets/briscdataset/brisc2025)
+- 🔗 Licenza originale: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Conversione in formato COCO disponibile nella cartella `/BRISC2025/` con script dedicato.
+
+## 📈 Risultati
+- **IoU media:** 0.8189  
+- **Dice coefficient:** 0.8857  
+- **Specificity:** >0.99  
+- Report completo disponibile in `/report/`.
+
+## ✍️ Documentazione
+Il report completo del progetto è disponibile nella cartella `/report/`, e include:  
+- Materiali e metodi
+- Risultati quantitativi e qualitativi
+- Discussione e Proposte future
+- Report CSV inferenza su dataset di test
+---
 ## 📁 Contenuto del repository
 - **📁 `BRISC2025/`**  - Dataset convertito in formato COCO + RLE
   - **📁 `classification_task/`**
@@ -52,22 +73,63 @@ Il sistema è stato addestrato e testato sul dataset pubblico **_BRISC2025_**, c
   - Versione della libreria Detectron2 utilizzata, con tutti i pacchetti necessari.  
   - Link ufficiale Detectron2: [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)
 
-## 📑 Dataset
-Il dataset utilizzato è **BRISC2025**, disponibile pubblicamente su Kaggle e distribuito sotto licenza **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.
 
-- Dataset originale: [BRISC2025 su Kaggle](https://www.kaggle.com/datasets/briscdataset/brisc2025)
-- 🔗 Licenza originale: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- Conversione in formato COCO disponibile nella cartella `/BRISC2025/` con script dedicato.
+---
+## 🚀 Guida al Setup – Istruzioni Preliminari
 
-## 📈 Risultati
-- **IoU media:** 0.8189  
-- **Dice coefficient:** 0.8857  
-- **Specificity:** >0.99  
-- Report completo disponibile in `/report/`.
+Per avviare correttamente il progetto, è necessario seguire questi passaggi **prima di qualsiasi attività**.
 
-## ✍️ Documentazione
-Il report completo del progetto è disponibile nella cartella `/report/`, e include:  
-- Materiali e metodi
-- Risultati quantitativi e qualitativi
-- Discussione e Proposte future
-- Report CSV inferenza su dataset di test
+
+
+### 🔗 Accesso a Google Colab
+
+1. Accedi a [Google Colab](https://colab.research.google.com/).
+2. Importa il notebook `tumor_segmentation_colab.ipynb` dal repository GitHub:  
+   - Vai su **`File > Apri notebook > GitHub`**, inserisci l’URL del repository e seleziona il notebook.  
+   - Oppure scaricalo dal repo e caricalo su Colab manualmente.
+
+
+
+### ✅ Passo 1 – Clonare il repository
+
+Eseguire lo script per clonare il repository GitHub su `/content/` (consigliato) oppure su Google Drive se si desidera mantenerne una copia persistente.
+
+
+
+### ✅ Passo 2 – Installare i requisiti
+
+Avviare lo script di setup per installare:  
+- `Detectron2`  
+- `Torch` e `Torchvision`  
+- Eventuali altre dipendenze (OpenCV, COCO API, matplotlib, ecc.)
+
+
+
+### ⚠️ Passo 3 – Riavviare la sessione Colab
+
+Una volta completata l’installazione delle librerie, è **necessario riavviare manualmente la sessione Colab** affinché `Detectron2` venga correttamente riconosciuto.
+
+→ Vai su **`Runtime > Restart runtime`** (**`Runtime > Riavvia il runtime`** nella versione italiana).  
+→ Dopo il riavvio, eseguire nuovamente la cella di clonazione del repository o riprendere dal punto desiderato.
+
+
+
+### ✅ Passo 4 – Registrare le istanze COCO
+
+Eseguire lo script di registrazione delle istanze COCO.  
+→ Questo passaggio è obbligatorio per rendere il dataset visibile a Detectron2 durante training, inferenza e valutazione.
+
+
+
+### 🎯 Setup completato
+
+L’ambiente è ora correttamente configurato.  
+→ È possibile procedere liberamente con qualsiasi attività disponibile nel progetto:  
+- 🏋️‍♂️ Training del modello  
+- 📊 Valutazione con COCOEvaluator  
+- 🎯 Inferenza su immagini singole  
+- 📈 Visualizzazione degli eventi training su TensorBoard  
+- 🖼️ Testing interattivo tramite Gradio  
+- 🗂️ Generazione e analisi dei report CSV  
+
+Il resto è **a discrezione dell’utente**, il setup è completo.
