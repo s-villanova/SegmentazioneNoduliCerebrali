@@ -139,4 +139,3 @@ Il resto è **a discrezione dell’utente**, il setup è completo.
 ## 📩 Contatti  
 Per domande, chiarimenti o segnalazioni: s.villanova@studenti.uniba.it , a.alloggio8@studenti.uniba.it , s.martiradonna13@studenti.uniba.it
 
----
